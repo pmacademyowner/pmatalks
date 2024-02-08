@@ -5,13 +5,13 @@
     <meta name="author" content="">
     <title>PMACADEMY | Welcome</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="static/assets/img/logo-no-text.png">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo-no-text.png">
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css">
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="static/css/styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
     <!-- Google Font - Martian Mono -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap">
   <style>.d-none {
@@ -36,6 +36,16 @@
   .move-in {
       transition: transform 0.3s ease-in-out;
     }
+    
+    .youtube, .youtube:active, .youtube:focus, .youtube:visited {
+        text-decoration: none;
+        color: white; /* Change the color to your desired color */
+    }
+
+    /* Change color for hover state */
+    .youtube:hover {
+        color: #5e17eb; /* Change the color to your desired color */
+    }
   
   </style></head>
   <body>
@@ -46,9 +56,9 @@
     <nav class="navbar navbar-expand px-5 py-3" style="background-color: #f4f4f4;">
       <div class="container-fluid px-5 container d-flex justify-content-between"style="background-color: #f4f4f4;">
           <!-- <a class="navbar-brand" href="#">PMAcademyy</a> -->
-          <!-- <img clss="navbar-brand" src="static/assets/img/logo.jpg" href="#home"> -->
+          <!-- <img clss="navbar-brand" src="assets/img/logo.jpg" href="#home"> -->
           <a class="navbar-brand" href="http://pmacademyy.com/">
-            <img src="static/assets/img/logo.png" alt="Logo" height="40"> <!-- Adjust the path and height as needed -->
+            <img src="assets/img/logo.png" alt="Logo" height="40"> <!-- Adjust the path and height as needed -->
             
           </a>
           <p class="pt-3 d-none d-lg-block" style="font-family: 'Martian Mono', monospace; font-size: large;"> P M A | Personal Masterclass Academy </p>
@@ -87,19 +97,15 @@
         <!-- <p> you are on a desktop</p> -->
         <div class="container-fluid p-0 container-fluid px-3 container d-flex justify-content-between">
             <div class="row g-0">
-                <div class="col-lg-7 px-lg-5 px-0" style="">
+                <div class="col-lg-7 px-lg-5 px-0">
                     <br>
                     <p>PMA Talk Series</p>
                     <h2>What's Cloud Computing?</h2>
                     <div class="d-flex align-items-center">
                         <div class="">
-                            <span class="badge rounded-pill bg-success">Upcoming</span>
-                            <span class="px-1"> January 25, 2024 </span>
-                            <span class="px-1"> | </span>
-                            <i class="far bi-clock"></i>
-                            <span class="px-1"> 12:00 PM EST </span>
-                            <span class="px-1"> | </span>
-                            <span class="duration">1 Hour</span>
+                            <span class="badge rounded-pill bg-danger"><a class="youtube" href="https://www.youtube.com/watch?v=ziiFdH9VQ8s&pp=ygUIcG1hdGFsa3M%3D" target="_blank">Watch Now</a></span>
+                            <span class="px-1">&larr;</span>
+                            <span><b>Watch the Webinar 1 Recording on YouTube now!</b></span>
                         </div>
                     </div>
                     <p class="py-2 lead mb-0">Cloud Computing is an innovative technology that enables users to utilize internet-based resources like servers, storage, and applications, providing flexibility, scalability, and on-demand services.</p>
@@ -112,32 +118,45 @@
                     </ul>
                     <p class="py-2">Don't hesitate to contact us at <a href="mailto:pmacademyy@gmail.com" target="_blank">pmacademyy@gmail.com</a>  or drop us a message on our social media channels for any inquiries.</p>
                 </div>
-                <div class="col-lg-4 d-flex justify-content-center align-items-center" style="padding-top:0%; padding-left:2%;">
-                    <div class="px-5 pt-4 row" style="background-color: #f4f4f4; border-radius: 10%; margin-top:5%; margin-bottom:5%;">
-
-			            <form action="https://pmacademyy.com/submit" method="POST">	
-                            <h2 class="mb-0" style="white-space: nowrap; color: #5e17eb;">Register Now</h2>
-                            <br />
-                            <p></p>
-                            <input type="text" id="name" name="name" class="form-control form-rounded mt-2" style="max-width: 500px;" placeholder="Enter Your Email Address">
-                            <p style="color: #5e17eb;"><!-- TODO: For Praveen, put response from backend saying email registered--></p>
-                            <div class="container">
-                                <div class="row align-items-center">
-                                    <button type="Submit" class="btn btn-primary rounded-pill move-in" style="background-color: #5e17eb; border-color: #5e17eb;">Submit</button>
-                                </div>
-                                <br>
-                            </div>
-                        </form>
-			            <br>
+                <div class="col-lg-4 d-flex" style="padding-top:10%; padding-bottom:8%; padding-left:2%;">
+                    <div class="px-5 py-4 col" style="background-color: #f4f4f4; border-radius: 10%;">
+                    <!-- <div class="px-5 py-4 col" style="background-color: #f4f4f4; border-radius: 10%; margin-bottom: 300px;"></div> -->
+                    <h2 class="mb-0 text-center" style="white-space: nowrap; color: #5e17eb;">Thank You For Attending!</h2>
+                        <p></p>
+                        <!-- <input type="email" class="form-control form-rounded" placeholder="Enter Your Email Address"> -->
+                        <p id="registrationMessage" style="color: #5e17eb;"><!-- TODO: For Praveen, put response from backend saying email registered--></p> 
+                        <div class="container">
+                            <!-- <div class="row align-items-center">
+                                <button type="button" class="btn btn-primary rounded-pill move-in" style="background-color: #5e17eb; border-color: #5e17eb;">Submit</button>
+                            </div> -->
+                            
+                            <p class="mt-4 text-center">Look out for our next webinar coming late February, to be announced soon!</p>
+                        </div>
+    
                         <!-- TODO: Try to find bigger icons idk -->
-                        <!-- <div class="container-fluid">
+                        <div class="container-fluid d-none d-md-block py-2">
                             <div class="row g-0 justify-content-around text-center">
-                                    <div class="col-md-3 col-sm-3 d-sm-inline"><a href="https://www.instagram.com/pmacademyy/" target="_blank"><i class="bi-instagram text-black fs-2"></i></a></div>
-                                    <div class="col-md-3 col-sm-3 d-sm-inline"><a href="https://www.facebook.com/pmacademyy" target="_blank"><i class="bi-facebook text-black fs-2"></i></a></div>
-                                    <div class="col-md-3 col-sm-3 d-sm-inline"><a href="https://linkedin.com/company/pmacademyy" target="_blank"><i class="bi-linkedin text-black fs-2"></i></a></div>
+                                <div class="col-md-3 col-sm-3 d-sm-inline"><a href="https://www.instagram.com/pmacademyy/" target="_blank"><i class="bi-instagram text-black fs-2"></i></a></div>
+                                <div class="col-md-3 col-sm-3 d-sm-inline"><a href="https://www.facebook.com/pmacademyy" target="_blank"><i class="bi-facebook text-black fs-2"></i></a></div>
+                                <div class="col-md-3 col-sm-3 d-sm-inline"><a href="https://linkedin.com/company/pmacademyy" target="_blank"><i class="bi-linkedin text-black fs-2"></i></a></div>
+                                <div class="col-md-3 col-sm-3 d-sm-inline"><a href="https://www.youtube.com/@pmacademyy" target="_blank"><i class="bi-youtube text-black fs-2"></i></a></div>
                             </div>
-                        </div> -->
-                        <p class="px-1"></p><!-- Fake tag to make the form space out vertically a bit -->
+                        </div>
+    
+                        <!-- Div to appear with social links only when on a phone since the above options dont work right on a phone rip -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 d-md-none">
+                                    <br>
+                                    <div class="text-center">
+                                        <a href="https://www.instagram.com/pmacademyy/" target="_blank"><i class="bi-instagram text-black fs-2 px-3"></i></a>
+                                        <a href="https://www.facebook.com/pmacademyy" target="_blank"><i class="bi-facebook text-black fs-2 px-3"></i></a>
+                                        <a href="https://linkedin.com/company/pmacademyy" target="_blank"><i class="bi bi-linkedin text-black fs-2 px-3"></i></a>
+                                        <a href="https://www.youtube.com/@pmacademyy" target="_blank"><i class="bi bi-youtube text-black fs-2 px-3"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>  
             </div>
@@ -174,7 +193,7 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6" style="padding: 0px;">
                             <div class="person-container">
-                                <img src="static/assets/img/prashanth-formal.jpg" alt="Prashanth Madhi" class="img-thumbnail img-fluid img-fluid float-end" style="width: 100px;">
+                                <img src="assets/img/prashanth-formal.jpg" alt="Prashanth Madhi" class="img-thumbnail img-fluid img-fluid float-end" style="width: 100px;">
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
@@ -195,7 +214,7 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6" style="padding: 0px;">
                             <div class="person-container">
-                                <img src="static/assets/img/praveen-casual.jpeg" alt="Praveen Gunasekar" class="img-thumbnail img-fluid float-end" style="width: 100px;">
+                                <img src="assets/img/praveen-casual.jpeg" alt="Praveen Gunasekar" class="img-thumbnail img-fluid float-end" style="width: 100px;">
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6 pl-0">
@@ -229,7 +248,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="person-container">
-                        <img src="static/assets/img/prashanth-formal.jpg" alt="Prashanth Madhi" class="img-thumbnail img-fluid" style="width: 100px;">
+                        <img src="assets/img/prashanth-formal.jpg" alt="Prashanth Madhi" class="img-thumbnail img-fluid" style="width: 100px;">
                     </div>
                     <div class="person-info">
                         <h5 style="margin:0px; margin-top:15px">Prashanth Madhi</h5>
@@ -244,7 +263,7 @@
                 </div>
                 <div class="col-6">
                     <div class="person-container">
-                        <img src="static/assets/img/praveen-casual.jpeg" alt="Praveen Gunasekar" class="img-thumbnail img-fluid" style="width: 100px;">
+                        <img src="assets/img/praveen-casual.jpeg" alt="Praveen Gunasekar" class="img-thumbnail img-fluid" style="width: 100px;">
                     </div>
                     <div class="person-info">
                         <h5 style="margin:0px; margin-top:15px">Praveen Gunasekar</h5>
@@ -288,7 +307,7 @@
                 <div class="col-lg-4 text-center my-auto">
                     <div class="">
                         <a class="navbar-brand" href="http://pmacademyy.com/">
-                            <img src="static/assets/img/logo-no-text.png" alt="Logo" height="20" class=""> <!-- Adjust the path and height as needed -->
+                            <img src="assets/img/logo-no-text.png" alt="Logo" height="20" class=""> <!-- Adjust the path and height as needed -->
                         </a>
                     </div>
                 </div>
@@ -309,6 +328,10 @@
                           <a href="https://linkedin.com/company/pmacademyy" target="_blank" class="d-none d-lg-inline"><i class="bi-linkedin text-white fs-2"></i></a>
                           <a href="https://linkedin.com/company/pmacademyy" target="_blank" class="d-lg-none" style="color:white;">LinkedIn</a>
                         </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.youtube.com/@pmacademyy" target="_blank" class="d-none d-lg-inline"><i class="bi-youtube text-white fs-2"></i></a>
+                            <a href="https://www.youtube.com/@pmacademyy" target="_blank" class="d-lg-none" style="color:white;">YouTube</a>
+                          </li>
                     </ul>
                 </div>
             </div>
@@ -322,7 +345,7 @@
             <div class="col-lg-6 text-center">
                 <div class="mt-4">
                     <a class="navbar-brand" href="http://pmacademyy.com/">
-                        <img src="static/assets/img/logo-no-text.png" alt="Logo" height="15" class=""> <!-- Adjust the path and height as needed -->
+                        <img src="assets/img/logo-no-text.png" alt="Logo" height="15" class=""> <!-- Adjust the path and height as needed -->
                     </a>
                 </div>
                 <br>
@@ -344,6 +367,10 @@
                     <li class="list-inline-item me-4 mb-3">
                         <a href="https://linkedin.com/company/pmacademyy" target="_blank" class="d-none d-lg-inline"><i class="bi-linkedin text-white fs-2"></i></a>
                         <a href="https://linkedin.com/company/pmacademyy" target="_blank" class="d-lg-none" style="color:white;">LinkedIn</a>
+                    </li>
+                    <li class="list-inline-item me-4 mb-3">
+                        <a href="https://www.youtube.com/@pmacademyy" target="_blank" class="d-none d-lg-inline"><i class="bi-youtube text-white fs-2"></i></a>
+                        <a href="https://www.youtube.com/@pmacademyy" target="_blank" class="d-lg-none" style="color:white;">YouTube</a>
                     </li>
                 </ul>
             </div>
